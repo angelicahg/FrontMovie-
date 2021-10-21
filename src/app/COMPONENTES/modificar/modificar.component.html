@@ -1,0 +1,59 @@
+<div class="container-fluid add">
+  <h1 class="text-center mt-5">Actualizar Pelicula</h1>
+
+
+  <form class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container">
+      <div class="row my-2">
+        <div class="col">
+          <label class="form-label">Nombre de pelicula</label>
+          <input [(ngModel)]=movie.mov_title type="text" class="form-control" name="nombre">
+        </div>
+      </div>
+
+
+
+      <div class="row my-2">
+        <div class="col">
+          <label class="form-label">año de pelicula</label>
+          <input [(ngModel)]=movie.mov_year type="text" class="form-control" name="año">
+        </div>
+      </div>
+
+
+      <div class="col">
+        <label class="form-label">tiempo de pelicula</label>
+        <input [(ngModel)]=movie.mov_time type="text" class="form-control" name="time">
+      </div>
+
+      <div class="row my-2">
+        <div class="col">
+          <label class="form-label">Idioma de pelicula</label>
+          <input [(ngModel)]=movie.mov_lang type="text" class="form-control" name="time">
+        </div>
+      </div>
+      <div class="col">
+        <label class="form-label">Fecha de la pelicula</label>
+        <input [(ngModel)]=movie.mov_dt_rel type="date" class="form-control" name="time"
+          [ngModelOptions]="{standalone: true}" required>
+      </div>
+
+      <div class="col">
+        <label class="form-label">Pais de pelicula</label>
+        <input [(ngModel)]=movie.mov_rel_country type="text" class="form-control" name="time">
+      </div>
+
+
+
+
+
+
+
+    </div>
+  </form>
+  <div class="d-flex justify-content-center align-items-center my-5 gap-5">
+
+    <button (click)="modificar()" class="btn btn-danger" type="submit">Actualizar</button>
+
+  </div>
+</div>
