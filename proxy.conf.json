@@ -1,9 +1,0 @@
-{
-  "/api/*":
-  {
-      "target": "https://movie-crud-mean-api.herokuapp.com/api/",
-      "secure": "false",
-      "changeOrigin":true ,
-      "logLevel": "debug"
-  }
-}

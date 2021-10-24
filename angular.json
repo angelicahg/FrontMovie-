@@ -70,13 +70,13 @@
         "serve": {
           "options": {
             "browserTarget": "VideoClub:build",
-            "proxyConfig": "proxy.conf.json"
+            
           }, 
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
               "browserTarget": "CrudBasico:build:production",
-              "proxyConfig": "proxy.conf.json"
+              
             },
             "development": {
               "browserTarget": "CrudBasico:build:development"
