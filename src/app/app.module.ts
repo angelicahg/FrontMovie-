@@ -1,35 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InicioComponent } from './COMPONENTES/inicio/inicio.component';
-import { AgregarComponent } from './COMPONENTES/agregar/agregar.component';
-import { ModificarComponent } from './COMPONENTES/modificar/modificar.component';
-import { MovieService} from '../app/SERVICES/movie.service';
-
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-
-import { FooterComponent } from './COMPONENTES/footer/footer.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { MovieFormComponent } from './components/movie-form/movie-form.component';
+import { MovieListComponent } from './components/movie-list/movie-list.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MoviesService } from './services/movies.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
-    AgregarComponent,
-    ModificarComponent,
-    FooterComponent 
+    NavigationComponent,
+    MovieFormComponent,
+    MovieListComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
-
-
   ],
-  providers: [MovieService],
+  providers: [
+    MoviesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

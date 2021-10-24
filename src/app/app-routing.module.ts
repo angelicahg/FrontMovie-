@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AgregarComponent } from './COMPONENTES/agregar/agregar.component';
-import { InicioComponent } from './COMPONENTES/inicio/inicio.component';
-import { ModificarComponent } from './COMPONENTES/modificar/modificar.component';
+
+import { MovieListComponent } from './components/movie-list/movie-list.component'
+import { MovieFormComponent } from './components/movie-form/movie-form.component'
 
 const routes: Routes = [
-{ path:'', redirectTo:'/inicio', pathMatch:'full'},
-{path:'inicio', component:InicioComponent},
-{path:'add', component:AgregarComponent},
-{path:'edit/:id', component:ModificarComponent},
-
+  {
+    path: '',
+    redirectTo: '/movies',
+    pathMatch: 'full'
+  },
+  {
+    path: 'movies',
+    component: MovieListComponent,
+  },
+  {
+    path: 'movies/add',
+    component: MovieFormComponent,
+  },
+  {
+    path: 'movies/edit/:id',
+    component: MovieFormComponent,
+  }
 ];
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

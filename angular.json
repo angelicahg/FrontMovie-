@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "68a49434-7780-4b09-8635-d2038af22635"
+    "analytics": "1b1d9cc8-ef42-4829-9433-888f5831449a"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "CrudBasico": {
+    "movies-front": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/CrudBasico",
+            "outputPath": "dist/movies-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,13 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "options": {
-            "browserTarget": "VideoClub:build",
-            
-          }, 
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "CrudBasico:build:production",
-              
+              "browserTarget": "movies-front:build:production"
             },
             "development": {
-              "browserTarget": "CrudBasico:build:development"
+              "browserTarget": "movies-front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "CrudBasico:build"
+            "browserTarget": "movies-front:build"
           }
         },
         "test": {
@@ -110,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "CrudBasico"
+  "defaultProject": "movies-front"
 }

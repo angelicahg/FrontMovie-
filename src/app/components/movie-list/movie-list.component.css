@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Rye&display=swap');
+table .edit{
+  margin-right: 10px;
+}
+img {
+  margin: auto;
+}
+@media (max-width:767px) {
+  img{
+    width: 200px;
+  }
+}
